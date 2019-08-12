@@ -1,6 +1,6 @@
 ## Gamificationjs - the plug-and-play gamification engine
 
-In short, the service should provide an easy to install and quick to kick-start gamification of any project by keeping a flexible model of levels, score counting, different types of goals to provide a game-like experience in any other project. Participants are assumed to compete with each other or maybe in some situations create groups or tribes. All goals and rewards must be trackable to show the historical changes. See the paragraph _Tutorial_ for details how to setup a gamification model to start using it. Before start, install dependencies with `npm install`.
+In short, the service should provide an easy to install and quick to kick-start gamification of any project by keeping a flexible model of levels, score counting, different types of goals to provide a game-like experience in any other project. Participants are assumed to compete with each other or maybe in some situations create groups or tribes. All goals and rewards must be trackable to show the historical changes.
 
 **NOTE:** if you're a game developer and know more things how to setup the basis, you're very welcome to give your feedback how the engine may be drafted.
 
