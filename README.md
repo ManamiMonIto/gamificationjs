@@ -10,7 +10,7 @@ In short, the service should provide an easy to install and quick to kick-start 
 
 The gamificationjs aims to become a plug-and-play service to instantly make possible to introduce competition between users or softly lead into some direction (by giving rewards as incentives). It should be possible to quickly describe a game model and start using the service without additional coding of the service.
 
-### Theory
+### Theory & Metrics
 
 Any game where users compete with each other or may possible unite into groups have following concepts. For clarity in most cases we will use a taxi mobile app where we should gamify the quality of service as well as number of passengers etc.
 
@@ -63,3 +63,4 @@ Any game where users compete with each other or may possible unite into groups h
  - update models according to the updated concepts in this README
  - dockerize
  - add demo page with examples
+ - extend with simplest visual examples with badges, scorecard, progressbar
