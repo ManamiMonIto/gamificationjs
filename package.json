@@ -1,0 +1,57 @@
+{
+  "name": "gamificationjs",
+  "version": "0.1.0",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/o1dnik/gamificationjs"
+  },
+  "engines": {
+    "node": "11.11.0",
+    "npm": "6.10.2"
+  },
+  "scripts": {
+    "start": "pm2 start ./src/server.js",
+    "dev": "nodemon ./src/server.js",
+    "migrate": "knex migrate:latest",
+    "migrate:test": "knex migrate:latest --env testing",
+    "migrate:dev": "knex migrate:latest --env development",
+    "migrate:prod": "knex migrate:latest --env production",
+    "seed:test": "knex seed:run --env testing",
+    "seed:dev": "knex seed:run --env development",
+    "test": "./node_modules/mocha/bin/_mocha ./test/**/*.test.js"
+  },
+  "keywords": [
+    "gamify",
+    "gamification",
+    "gamificationjs"
+  ],
+  "author": "Nikita Kudinov",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "dotenv": "^8.0.0",
+    "eslint": "^4.19.1",
+    "nodemon": "^1.17.3",
+    "pg": "^7.4.3"
+  },
+  "dependencies": {
+    "@koa/cors": "2",
+    "bcryptjs": "^2.4.3",
+    "bookshelf": "^0.13.3",
+    "bookshelf-secure-password": "^3.1.0",
+    "jsonwebtoken": "^8.2.1",
+    "knex": "^0.13.0",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-helmet": "^4.0.0",
+    "koa-morgan": "^1.0.1",
+    "koa-passport": "^4.0.1",
+    "koa-redis": "^3.1.1",
+    "koa-router": "^7.2.1",
+    "koa-session": "^5.5.1",
+    "koa-static-cache": "^5.1.2",
+    "lodash": "^4.17.5",
+    "passport-local": "^1.0.0",
+    "pm2": "^3.0.0"
+  }
+}
