@@ -43,24 +43,24 @@ Any game where users compete with each other or may possible unite into groups h
     - Achievement - an attribute of a Goal. For some reason it was used separately from Reward. Probably the Reward is given once and may contain some coins or other values while Achievements are similar to statuses which may be given or taken depending on the progress (WIP|TBD).
     - Badge - an attribute of a Goal. In original idea it was an image or URL to an image that should be given to a user if he achieved the Goal. Maybe it should be a part of the Reward for simplification (WIP|TBD).
     - Bonus score - an attribute of a Goal. Original idea assumed existance of a general score for each user which then helped to count a Level and give badges. In that case the bonus score would be added up to the general score. In case of replacement of the general score with some coins, makes sense to use them instead (WIP|TBD).
-  - Level - TBD
-  - Coins - TBD
   - Total Score - is a calculated value potentially used for comparison of users. The formula by which it is calculated should be equal for all users. It will make more sense if you think of a money value of each ScoreEvent. For example one passenger ride would be +$20 and one parcel delivered for example +$10 while one police ticket is -$100. Having reached a Goal of 5 passengers and 2 parcels delivered with zero accidents and one police ticket, would give you some monetary value of `5 x (+$20) + 2 x (+$10) + 1 x (-$100) = $20` - and we can count this as a Progress for given period of time or as a Total Score of all times. This concept does not always work well with different types of countable values, so it's considered optional. But it may be useful for example for calculation of a Level which is also a generic view on a progress of a user.
+  - Level - sequence of numbers of TotalScore to acquire new badge or title if passed the according number
+  - Coins - TBD
 
 ### Gamification elements
 
- - Score - to compare with measurement
- - Badge - for eye-cathying diffs
- - Title
- - Level - yet to be defined in way of calculation
- - Coins - yet to be defined in own value
- - ?
+ - Score - for comparison of users, to build a score table
+ - Badge - for eye-catching differences between "players"
+ - "Player" Title - TBD
+ - Level - TBD
+ - Coins - TBD
 
-### Todos
+### TODO
 
- - replace Knex and Bookshelf with Sequelize
- - replace SQL with Mongodb
- - update models according to the updated concepts in this README
- - dockerize
- - add demo page with examples
- - extend with simplest visual examples with badges, scorecard, progressbar
+ - dockerize the server-side of the engine
+ - replace Knex and Bookshelf with Sequelize or better alternative
+ - add NoSQL driver to be able to connect Mongodb instead of SQL-database
+ - update models according to the updated concepts in this README, update migrations if needed
+ - add demo page with examples how to fetch data and show it
+ - add visual components with badges, scorecard, progressbar with Reactjs
+ - suggest an update of current TODO list or README
