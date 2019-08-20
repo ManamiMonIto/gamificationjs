@@ -29,10 +29,10 @@
   "author": "Nikita Kudinov",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "dotenv": "^8.0.0",
+    "dotenv": "^8.1.0",
     "eslint": "^4.19.1",
     "nodemon": "^1.17.3",
-    "pg": "^7.4.3"
+    "pg": "^7.12.1"
   },
   "dependencies": {
     "@koa/cors": "2",
@@ -40,7 +40,7 @@
     "bookshelf": "^0.13.3",
     "bookshelf-secure-password": "^3.1.0",
     "jsonwebtoken": "^8.2.1",
-    "knex": "^0.19.1",
+    "knex": "^0.19.2",
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-helmet": "^4.0.0",
@@ -51,6 +51,8 @@
     "koa-session": "^5.5.1",
     "koa-static-cache": "^5.1.2",
     "lodash": "^4.17.15",
+    "oracle": "^0.4.1",
+    "oracledb": "^4.0.1",
     "passport-local": "^1.0.0",
     "pm2": "^3.0.0"
   }

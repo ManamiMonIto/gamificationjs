@@ -1,6 +1,7 @@
 const dotenv = require('dotenv')
-dotenv.load()
+dotenv.config()
 const path = require('path')
+
 
 module.exports = {
   testing: {
