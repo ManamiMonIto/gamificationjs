@@ -14,7 +14,7 @@ Verify local installation of PortgresDB:
 3. `CREATE ROLE gamification WITH LOGIN PASSWORD 'gamification';` to create dedicated user
 4. `ALTER ROLE gamification CREATEDB;` to give permission to create DB.
 5. `\q` to exit and re-login with new user `psql postgres -U gamification`
-6. `CREATE DATABASE gamification`
+6. `CREATE DATABASE gamification`\q
 7. `GRANT ALL PRIVILEGES ON DATABASE gamification TO gamification;`. Then check if database was setup correctly: `\list`. If you need to change owner of db: `ALTER DATABASE gamification OWNER TO gamification;`.
 8. `\connect gamification;` and finally `\dt` to check the tables. `\q` to exit.
 

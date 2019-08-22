@@ -27,7 +27,7 @@ module.exports = {
     }
   },
   development: {
-    client: 'oracledb',
+    client: 'pg',
     connection: {
       port: process.env.DB_PORT,
       host: process.env.DB_HOST,
@@ -50,7 +50,7 @@ module.exports = {
     }
   },
   production: {
-    client: 'oracledb',
+    client: 'pg',
     connection: {
       port: process.env.DB_PORT,
       host: process.env.DB_HOST,
@@ -59,14 +59,17 @@ module.exports = {
       database: process.env.DB_NAME,
       charset: 'utf8'
     },
-    debug: false
-    // migrations: {
-    //   directory: path.join(__dirname, 'src', 'db', 'migrations')
-    //   // tableName: 'knex_migrations'
-    // }
-    //, pool: {
-    //   min: 2,
-    //   max: 10
-    // }
+    debug: true,
+    pool: {
+      min: 2,
+      max: 10
+    },
+    migrations: {
+      directory: path.join(__dirname, 'src', 'db', 'migrations'),
+      tableName: 'migrations'
+    },
+    seeds: {
+      directory: path.join(__dirname, 'src', 'db', 'seeds', 'production')
+    }
   }
 }

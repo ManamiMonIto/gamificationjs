@@ -9,8 +9,8 @@ exports.seed = function (knex, Promise) {
       const salt = bcrypt.genSaltSync();
       // const hash1 = bcrypt.hashSync('lily', salt);
 
-      return Promise.join(
-        knex('users').insert({
+      //return Promise.join(
+        return knex('users').insert({
           // NOTE: uuid by RFC4122 is in the models
           firstname: 'Lily',
           lastname: 'Craig',
@@ -18,9 +18,9 @@ exports.seed = function (knex, Promise) {
           level_id: 1,
           owner_id: 1,
           // password_digest: hash1,
-        }),
+        })
         // TODO: move all data to mock JSON files
-        knex('users').insert([
+        .then(knex('users').insert([
           {
             firstname: 'Lawrence',
             lastname: 'Boyd',
@@ -63,12 +63,13 @@ exports.seed = function (knex, Promise) {
             level_id: 1,
             owner_id: 7,
           },
-        ]),
+        ])
+        )
         // or join promises:
         // knex('users').insert({
         //   email: '',
         //   password_digest: hash,
         // }),
-      );
+      
     });
 };
